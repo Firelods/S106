@@ -9,7 +9,6 @@ body,header,main{
     margin:0;
 }
 html,body,main{
-    height:100%;
     background-color:#202027;
 }
 
@@ -20,11 +19,12 @@ footer{
 }
 
 #svg{
-    margin-top: 50px;
+    margin-top:25px;
     background:url(../img/overview-bg.svg) top no-repeat;
     background-size: cover;
-    height:75%;
+    height: 25%;
     width:100%;
+    position :absolute;
 }
 footer span{
     position:relative;
@@ -44,6 +44,7 @@ iframe{
 
     width: 100%;
     height: 200px;
+    border:1px solid rgba(0, 0, 0, 0.075);
 }
 #cache{
     position: absolute;
@@ -222,8 +223,9 @@ ul[id="Menu"] li :hover:after{
 
 #lbmode{
     position:absolute;
-    margin-left:95vw;
+    margin-left:90vw;
     margin-top:90px;
+    cursor: pointer;
     transition: transform 0.5s ease-in-out; 
 }
 
@@ -294,3 +296,13 @@ ul[id="Menu"] li :hover:after{
     display:none;
 }
 
+
+main{
+    padding-bottom:100px;
+}
+
+#copyright{
+    position:relative;
+    background-color:rgba(255, 255, 255, 0.37);
+    top:15vh;
+}
