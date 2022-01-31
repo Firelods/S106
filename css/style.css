@@ -221,19 +221,17 @@ ul[id="Menu"] li :hover:after{
 }
 
 #lbmode{
-
     position:absolute;
     margin-left:95vw;
     margin-top:90px;
-    transition: opacity 0.5s;
-    transition: 0.5s ease-in-out; 
+    transition: transform 0.5s ease-in-out; 
 }
 
 #toogle{
     height:50px;
     width:50px;
     position:absolute;
-    background-color:white;
+    background:#202027;
     z-index:999;
 }
 
@@ -250,11 +248,11 @@ ul[id="Menu"] li :hover:after{
     width:35px;
     border-radius: 50% 50%;
     background:#202027;
-    transition: 0.5s ease-in-out; 
+    transition: transform 0.5s ease-in-out; 
 }
 
 #mode:checked ~#lbmode{
-    transform:rotate(360deg) scale(105%);
+    transform:rotate(180deg) scale(105%);
 }
 
 #mode:checked ~#lbmode #toggle #circle2{
