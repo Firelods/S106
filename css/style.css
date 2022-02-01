@@ -54,9 +54,9 @@ iframe{
     z-index: 999;
 }
 #iframebtc{
-    margin-left:39vw;
+    margin-left:25vw;
 
-    width:500px;
+    width:50vw;
 }
 
 header{
@@ -176,8 +176,8 @@ ul[id="Menu"] li :hover:after{
 
 .container {
     transition:transform 1s ease-in-out;
-    width:30%;
-    margin-left:35vw;
+    width:50%;
+    margin-left:25vw;
     padding:40px;
     display: flex;  
     background:#232937;
@@ -186,9 +186,10 @@ ul[id="Menu"] li :hover:after{
 }
 
 .container1 {
+    margin-bottom:50px;
     transition:transform 1s ease-in-out;
-    width:30%;
-    margin-left:35vw;
+    width:50%;
+    margin-left:25vw;
     padding:40px;
     display: flex;  
     flex-direction: column;
@@ -198,7 +199,8 @@ ul[id="Menu"] li :hover:after{
 }
 
 #logobitcoin{
-    width: 100%;
+    width: 80%;
+    min-width: 75px;
     margin-left: 10%;
     margin-top: 6%;
     border-radius:50%;
@@ -207,11 +209,12 @@ ul[id="Menu"] li :hover:after{
 
 
 
-.container:hover{
+.container:hover,.container1:hover{
     opacity:0.9;
     transform: scale(1.1);
 
 }
+
 .container:hover #logobitcoin{
     transform:rotate(360deg);
     
