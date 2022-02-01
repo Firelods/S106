@@ -253,6 +253,35 @@ ul[id="Menu"] li :hover:after{
     transition: transform 0.5s ease-in-out; 
 }
 
+.s{
+    background:var(--couleur-gen);
+    border-radius:50%;
+    width:15px;
+    height:5px;
+    transform:translate(0,0) scale(0);
+    transition: transform 0.5s ease-in-out ; 
+}
+
+
+
+#mode:checked ~#lbmode #toggle #circle #s1{
+    transform: translate(41px,45px) rotate(45deg) scale(100%);
+}
+
+#mode:checked ~#lbmode #toggle #circle #s2{
+    transform: translate(17px,50px) rotate(90deg) scale(100%);
+}
+
+#mode:checked ~#lbmode #toggle #circle #s3{
+    transform: translate(-6px,35px) rotate(-45deg) scale(100%);
+}
+
+#mode:checked ~#lbmode #toggle #circle #s4{
+    transform: translate(-15px,12px) scale(100%);
+}
+
+
+
 #mode:checked ~#lbmode{
     transform:rotate(180deg) scale(105%);
 }
@@ -306,3 +335,4 @@ main{
     background-color:rgba(255, 255, 255, 0.37);
     top:15vh;
 }
+
