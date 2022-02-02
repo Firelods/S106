@@ -64,9 +64,10 @@ header{
 }
 
 #logopng{
-    width:80%;
-    height: 80%;
+    width:100%;
+
     max-width: 400px;
+    min-width: 200px;
 }
 
 nav {
@@ -87,7 +88,7 @@ nav {
     height:50px;
     border-top:solid #232937 1px;
     border-bottom: solid #232937 1px;
-    
+    padding-bottom:10px;
 }
 
 .petitmenu a{
@@ -112,6 +113,10 @@ ul[id="Menu"] li.grosmenu>a {
 }
 
 ul[id="Menu"] li a:hover {
+    transition:opacity 0.2s linear;
+}
+
+ul[id="Menu"] li a:hover {
     opacity: 50%;
     border-radius: 0px;
 }
@@ -124,7 +129,7 @@ ul[id="Menu"] li {
 ul[id="Menu"] li.grosmenu> a::after {
     content: '';
     position: absolute;
-    top: 70%;
+    top: 100%;
     right: 40px;
     width: 8px;
     height: 5px;
@@ -177,6 +182,7 @@ ul[id="Menu"] li :hover:after{
 .container {
     transition:transform 1s ease-in-out;
     width:50%;
+    margin-bottom:50px;
     margin-left:25vw;
     padding:40px;
     display: flex;  
@@ -205,6 +211,11 @@ ul[id="Menu"] li :hover:after{
     margin-top: 6%;
     border-radius:50%;
     transition: transform 1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+
+}
+
+a:visited{
+    color: inherit;
 }
 
 
@@ -307,7 +318,7 @@ ul[id="Menu"] li :hover:after{
 #mode:checked ~ main .container{
     background:white;
     color:black;
-    box-shadow: -2px 1px 5px 5px  rgb(0 0 0 / 40%);
+    box-shadow: 20px 10px 25px 5px rgb(139 139 139 / 40%);
 }
 
 #mode:checked ~ main #iframedark{
