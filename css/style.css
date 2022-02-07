@@ -258,7 +258,6 @@ a:visited{
     margin-top:90px;
     cursor: pointer;
     transition: transform 0.5s ease-in-out; 
-    z-index:999;
 }
 
 #toogle{
@@ -267,9 +266,11 @@ a:visited{
     position:absolute;
     background:#202027;
     z-index:999;
+    display:block;
 }
 
 #circle{
+    display:block;
     height:50px;
     width:50px;
     border-radius: 50% 50%;
@@ -277,6 +278,7 @@ a:visited{
 }
 
 #circle2{
+    display:block;
     position: absolute;
     height:35px;
     width:35px;
@@ -286,6 +288,7 @@ a:visited{
 }
 
 .s{
+    display:block;
     background:var(--couleur-gen);
     border-radius:50%;
     width:15px;
@@ -293,7 +296,6 @@ a:visited{
     transform:translate(0,0) scale(0);
     transition: transform 0.5s ease-in-out ; 
 }
-
 
 
 #mode:checked ~#lbmode #toggle #circle #s1{
