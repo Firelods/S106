@@ -1,118 +1,120 @@
-
-:root{
+:root {
     font-family: "Titillium Web", Arial, sans-serif;
-    --couleur-gen:#F7931A;
+    /* Définition de variables de couleur pour les réutiliser tout le long du css*/
+    --couleur-gen: #F7931A;
+    scroll-behavior:smooth;
 }
 
-body,header,main{
-    border:0;
-    margin:0;
-}
-html,body{
-    background-color:#202027;
-}
-
-footer{
-    height:50%;
-    width:100%;
-
+body,
+header,
+main {
+    border: 0;
+    margin: 0;
 }
 
-#color{
-    position:fixed;
-    background:#202027;
+html,
+body {
+    background-color: #202027;
+}
+
+footer {
+    height: 50%;
+    width: 100%;
+
+}
+
+#color {
+    position: fixed;
+    background: #202027;
     width: 100%;
     height: 100%;
     left: 0;
     top: 0;
 }
 
-nav{
-    z-index:999;
-}
-
-
-#svg{
-    margin-top:25px;
-    width:100%;
-    position :relative;
-}
-#copyright{
-    position:relative;
-    color:white;
-    bottom:30px;
-}
-
-
-
-h1{
-    margin-top: 0;
-    position:relative;
-    text-align:center;
-    padding-top: 10%;
-    color: var(--couleur-gen);
-}   
-
-iframe{
-    position: relative;
-    /* overflow:hidden; */
-    width: 100%;
-    height: 200px;
-    border:1px solid rgba(0, 0, 0, 0.075);
-}
-#cache{
-    position: absolute;
-    width: 500px;;
-    height: 52px;
-    background-color: white;
+nav {
     z-index: 999;
 }
-#iframebtc{
-    margin-left:25vw;
 
-    width:50vw;
+
+#svg {
+    margin-top: 25px;
+    width: 100%;
+    position: relative;
 }
 
-a{
-    color: inherit;
-    font-weight: bold;
+#copyright {
+    position: relative;
+    color: white;
+    bottom: 30px;
 }
 
-header{
+
+h1:nth-of-type(1) {
+    padding-top: 10%;
+}
+
+h1 {
+    margin-top: 0;
+    position: relative;
+    text-align: center;
+    color: var(--couleur-gen);
+}
+
+iframe {
+    position: relative;
+    width: 100%;
+    height: 200px;
+    /* Redéfinition de la border pour l'iframe*/
+    border: 1px solid rgba(0, 0, 0, 0.075);
+}
+
+#iframelight {
+    display: none;
+}
+
+#iframebtc {
+    margin-left: 25vw;
+    width: 50vw;
+}
+
+header {
     padding-bottom: 100px;
 }
 
-#logopng{
-    width:100%;
+#logopng {
+    width: 100%;
 
     max-width: 400px;
     min-width: 200px;
 }
 
+
+/* Barre de navigation */
 nav {
     border-top: solid;
-    border-color:  var(--couleur-gen);
+    border-color: var(--couleur-gen);
     width: 100%;
     margin: 0;
     position: sticky;
     top: 5px;
-    display:flex;
-}
-
-#Menu{
     display: flex;
-    margin:0px;  
-    margin-top:15px;
-    padding-left:40px;
-    height:50px;
-    border-top:solid #232937 1px;
-    border-bottom: solid #232937 1px;
-    padding-bottom:10px;
 }
 
-.petitmenu a{
+#Menu {
+    display: flex;
+    margin: 0px;
+    margin-top: 15px;
+    padding-left: 40px;
+    height: 50px;
+    border-top: solid #232937 1px;
+    border-bottom: solid #232937 1px;
+    padding-bottom: 10px;
+}
+
+.petitmenu a {
     text-decoration: none;
-    color:var(--couleur-gen)
+    color: var(--couleur-gen)
 }
 
 ul[id="Menu"] li.grosmenu>a {
@@ -124,15 +126,15 @@ ul[id="Menu"] li.grosmenu>a {
     /* top:-2px; */
     color: var(--couleur-gen);
     text-align: left;
-    padding:10px;
+    padding: 10px;
     font-size: 17px;
-    margin-left:-7px;
+    margin-left: -7px;
     line-height: 17px;
     cursor: pointer;
 }
 
 ul[id="Menu"] li a:hover {
-    transition:opacity 0.2s linear;
+    transition: opacity 0.2s linear;
 }
 
 ul[id="Menu"] li a:hover {
@@ -142,10 +144,10 @@ ul[id="Menu"] li a:hover {
 
 ul[id="Menu"] li {
     display: inline;
-    border-radius:0;
+    border-radius: 0;
 }
 
-ul[id="Menu"] li.grosmenu> a::after {
+ul[id="Menu"] li.grosmenu>a::after {
     content: '';
     position: absolute;
     top: 100%;
@@ -158,303 +160,320 @@ ul[id="Menu"] li.grosmenu> a::after {
     transition: transform .2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
-ul[id="Menu"] li :hover:after{
+ul[id="Menu"] li :hover:after {
     transform: rotate(180deg);
 }
 
 .sousmenu {
     z-index: 1000;
-    opacity:0;
+    opacity: 0;
     transition: transform .2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
     transform: scale(1, 0);
     display: flex;
-    padding:0;
+    padding: 0;
     padding-top: 10px;
-    position:absolute;
-    /* border-bottom: solid #232937 1px; */
-    color:var(--couleur-gen);
+    position: absolute;
+    color: var(--couleur-gen);
     font-size: 12px;
     line-height: 15px;
-    text-align:left;
+    text-align: left;
 }
 
 #Menu li:hover .sousmenu {
-    opacity:1;
-    transform:scale(1, 1);
+    opacity: 1;
+    transform: scale(1, 1);
     flex-direction: column;
 }
 
-.sousmenu li{
+.sousmenu li {
     margin-bottom: 2px;
-    padding:10px;
-    background-color:#f7941a15;
+    padding: 10px;
+    background-color: #f7941a15;
     border: 1px solid transparent;
     border-radius: 10px !important;
 }
 
-#description{
+
+
+/* Style du main et de ses container */
+
+#description {
     font-size: 20px;
     transition: transform 1s ease-in-out;
 }
 
 
 .container {
-    position:relative;
-    transition:transform 1s ease-in-out;
-    width:50%;
-    margin-bottom:50px;
-    margin-left:25vw;
-    padding:40px;
-    display: flex;  
-    background:#232937;
-    color:white;
-    box-shadow:10px 5px 5px rgba(0, 0, 0, 0.2) ;
-    z-index:999;
+    position: relative;
+    transition: transform 1s ease-in-out;
+    width: 50%;
+    margin-bottom: 50px;
+    margin-left: 25vw;
+    padding: 40px;
+    display: flex;
+    background: #232937;
+    color: white;
+    box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.2);
+    z-index: 999;
 }
 
 .container1 {
-    margin-bottom:50px;
-    transition:transform 1s ease-in-out;
-    width:50%;
-    margin-left:25vw;
-    padding:40px;
-    display: flex;  
+    margin-bottom: 50px;
+    transition: transform 1s ease-in-out;
+    width: 50%;
+    margin-left: 25vw;
+    padding: 40px;
+    display: flex;
     flex-direction: column;
-    background:#232937;
-    color:white;
-    position:relative;
-    z-index:999;
-    box-shadow:10px 5px 5px rgba(0, 0, 0, 0.2) ;
+    background: #232937;
+    color: white;
+    position: relative;
+    z-index: 999;
+    box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.2);
 }
 
-#logobitcoin{
+#logobitcoin {
     width: 80%;
     min-width: 75px;
     margin-left: 10%;
     margin-top: 6%;
-    border-radius:50%;
+    border-radius: 50%;
     transition: transform 1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 
 }
 
-a:visited{
+#circulation {
+    margin-bottom:5vh;
+}
+
+#courbe{
+    width:70%;
+    /* Pour centrer l'image on utiliser les arguments 'auto' aux margin horizontales */
+    margin-right:auto;
+    margin-left:auto;
+}
+
+.container:hover,
+.container1:hover {
+    opacity: 0.9;
+    transform: scale(1.1);
+}
+
+.container:hover #logobitcoin {
+    transform: rotate(360deg);
+}
+
+/* Définition de la décoration des liens cliquables*/
+a {
+    color: inherit;
+    font-weight: bold;
+}
+
+/* Faire en sorte qu'il ne change pas de couleur lorsque celui ci a déjà été cliqué*/
+a:visited {
     color: inherit;
 }
 
 
-
-.container:hover,.container1:hover{
-    opacity:0.9;
-    transform: scale(1.1);
-
+/* Soleil et Lune cliquable pour changer du mode sombre au mode clair */
+#mode {
+    display: none;
 }
 
-.container:hover #logobitcoin{
-    transform:rotate(360deg);
-    
-}
-
-#mode{
-    display:none;
-}
-
-#lbmode{
-    position:absolute;
-    margin-left:90vw;
-    margin-top:90px;
+#lbmode {
+    position: absolute;
+    margin-left: 90vw;
+    margin-top: 90px;
     cursor: pointer;
-    transition: transform 0.5s ease-in-out; 
+    transition: transform 0.5s ease-in-out;
     z-index: 100;
 }
 
-#toogle{
-    position:relative;
-    height:50px;
-    width:50px;
-    position:absolute;
-    background:#202027;
-    z-index:999;
-    display:block;
+#toogle {
+    position: relative;
+    height: 50px;
+    width: 50px;
+    position: absolute;
+    background: #202027;
+    z-index: 999;
+    display: block;
 }
 
-#circle{
-    display:block;
-    height:50px;
-    width:50px;
+#circle {
+    display: block;
+    height: 50px;
+    width: 50px;
     border-radius: 50% 50%;
-    background:var(--couleur-gen);
+    background: var(--couleur-gen);
 }
 
-#circle2{
-    display:block;
-    position:absolute;
-    height:35px;
-    width:35px;
+#circle2 {
+    display: block;
+    position: absolute;
+    height: 35px;
+    width: 35px;
     border-radius: 50% 50%;
-    background:#202027;
-    transition: transform 0.5s ease-in-out; 
+    background: #202027;
+    transition: transform 0.5s ease-in-out;
 }
 
-.s{
-    position:relative;
-    display:block;
-    background:var(--couleur-gen);
-    border-radius:50%;
-    width:15px;
-    height:5px;
-    transform:translate(0,0) scale(0);
-    transition: transform 0.5s ease-in-out ; 
-}
-
-
-#mode:checked ~#lbmode #toggle #circle #s1{
-    transform: translate(41px,45px) rotate(45deg) scale(1);
-}
-
-#mode:checked ~#lbmode #toggle #circle #s2{
-    transform: translate(17px,50px) rotate(90deg) scale(1);
-}
-
-#mode:checked ~#lbmode #toggle #circle #s3{
-    transform: translate(-6px,35px) rotate(-45deg) scale(1);
-}
-
-#mode:checked ~#lbmode #toggle #circle #s4{
-    transform: translate(-15px,8px) scale(1);
-}
-
-#mode:checked ~#lbmode #toggle #circle #s5{
-    transform: translate(50px,3px) scale(1);
-}
-
-#mode:checked ~#lbmode #toggle #circle #s6{
-    transform: translate(17px,-35px) rotate(90deg) scale(1);
-}
-
-#mode:checked ~#lbmode #toggle #circle #s7{
-    transform: translate(42px,-30px) rotate(-45deg) scale(1);
-}
-
-#mode:checked ~#lbmode #toggle #circle #s8{
-    transform: translate(-7px,-35px) rotate(45deg) scale(1);
+.s {
+    position: relative;
+    display: block;
+    background: var(--couleur-gen);
+    border-radius: 50%;
+    width: 15px;
+    height: 5px;
+    transform: translate(0, 0) scale(0);
+    transition: transform 0.5s ease-in-out;
 }
 
 
-
-#mode:checked ~#lbmode{
-    transform:rotate(180deg) scale(1.05);
+#mode:checked~#lbmode #toggle #circle #s1 {
+    transform: translate(41px, 45px) rotate(45deg) scale(1);
 }
 
-#mode:checked ~#lbmode #toggle #circle2{
-    background:white;
+#mode:checked~#lbmode #toggle #circle #s2 {
+    transform: translate(17px, 50px) rotate(90deg) scale(1);
+}
+
+#mode:checked~#lbmode #toggle #circle #s3 {
+    transform: translate(-6px, 35px) rotate(-45deg) scale(1);
+}
+
+#mode:checked~#lbmode #toggle #circle #s4 {
+    transform: translate(-15px, 8px) scale(1);
+}
+
+#mode:checked~#lbmode #toggle #circle #s5 {
+    transform: translate(50px, 3px) scale(1);
+}
+
+#mode:checked~#lbmode #toggle #circle #s6 {
+    transform: translate(17px, -35px) rotate(90deg) scale(1);
+}
+
+#mode:checked~#lbmode #toggle #circle #s7 {
+    transform: translate(42px, -30px) rotate(-45deg) scale(1);
+}
+
+#mode:checked~#lbmode #toggle #circle #s8 {
+    transform: translate(-7px, -35px) rotate(45deg) scale(1);
+}
+
+#mode:checked~#lbmode {
+    transform: rotate(180deg) scale(1.05);
+}
+
+#mode:checked~#lbmode #toggle #circle2 {
+    background: white;
     transform: scale(0);
 }
 
-
-#mode:checked ~ #color, #mode:checked ~ header , #mode:checked ~ #lbmode{
-    background:white ;
+#mode:checked~#color,
+#mode:checked~header,
+#mode:checked~#lbmode {
+    background: white;
 }
 
-#mode:checked ~ footer{
-    background:transparent ;
-    z-index:-1;
+#mode:checked~footer {
+    background: transparent;
+    z-index: -1;
 }
 
-#mode:checked ~ main .container,#mode:checked ~ main .container1{
-    background:white;
-    color:black;
+#mode:checked~main .container,
+#mode:checked~main .container1 {
+    background: white;
+    color: black;
     box-shadow: 20px 10px 25px 5px rgb(139 139 139 / 40%);
 }
 
-#mode:checked ~ main #iframedark{
-    display:none;
+#mode:checked~main #iframedark {
+    display: none;
 }
 
-#mode:checked ~ main #iframelight{
-    display:inline-block;
+#mode:checked~main #iframelight {
+    display: inline-block;
 }
 
-#mode:checked ~ main #svg{
-    background-color:white;
+#mode:checked~main #svg {
+    background-color: white;
 }
 
-#mode:checked+label #infobulle{
-    display:none;
+#mode:checked+label #infobulle {
+    display: none;
 
-}
-
-
-
-#iframelight{
-    display:none;
 }
 
 
+/* Définition des svg qui sont dans le background pour donner un univers au site */
 
-
-.svg{
+.svg {
     position: absolute;
 }
 
-#svg1{
-    top:800px;
-    left:-540px;
+#svg1 {
+    top: 800px;
+    left: -540px;
     color: #9D9D9D;
     z-index: auto;
-    transform:rotate(-90deg) ;
+    transform: rotate(-90deg);
 }
 
 
-#svg2{
-    position:relative;
+#svg2 {
+    position: relative;
     clear: right;
     float: right;
-    top:700px;
-    left:600px;
+    top: 700px;
+    left: 600px;
     color: #9D9D9D;
     z-index: auto;
-    transform:rotate(-90deg) scaleY(-1);
+    transform: rotate(-90deg) scaleY(-1);
 }
 
 
-#svg3{
+#svg3 {
     display: block;
-    position:relative;
+    position: relative;
     margin-left: auto;
     margin-right: auto;
     width: 30%;
-    margin-top:-150px;
-    margin-bottom:-100px;
-    min-width:300px;
+    margin-top: -150px;
+    margin-bottom: -100px;
+    min-width: 300px;
 }
 
-
-#infobulle{
-    /* display: none; */
+/* Infobulle qui averti l'utilisateur qu'il pleut cliquer sur la lune pour cahgner le mode du site internet */
+#infobulle {
     color: white;
     z-index: 9999;
     position: absolute;
     min-width: 200px;
-    width:min-content;
-    padding:5px;
-    font-size:0.8em;
-    border-radius:15px; 
+    width: min-content;
+    padding: 5px;
+    font-size: 0.8em;
+    border-radius: 15px;
     left: -13vw;
-    animation:infobulle 2s  cubic-bezier(0.65, -0.51, 0, 2.13) infinite;
+    animation: infobulle 4s cubic-bezier(0.65, -0.51, 0, 2.13) infinite;
     border: 1px solid white;
-    background:#202027c4;
+    background: #202027c4;
 }
 
-@keyframes infobulle{
-    
-    from {  
+
+/* Animation de l'infobulle pour que celle ci apparaisse et disparaisse en continue pour donner envie à l'utilisateur de cliquer */
+@keyframes infobulle {
+
+    from {
         display: block;
         opacity: 0;
     }
-    50%{
+
+    50% {
         opacity: 1;
     }
-    100%{
+
+    100% {
         opacity: 0;
     }
 }

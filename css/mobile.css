@@ -1,35 +1,32 @@
-
-
-
-
-
-
-
-
+/*Feuille de style CSS pour séparer le responsive du reste */
 
 @media screen and (max-width: 800px) {
-    .container{
-        width:80vw;
-        margin-left:0;
+    .container {
+        width: 80vw;
+        margin-left: 0;
     }
-    #iframebtc{
-        width:80vw;
-        margin-left:0;
+
+    #iframebtc {
+        width: 80vw;
+        margin-left: 0;
     }
-    #logopng{
+
+    #logopng {
         position: absolute;
-        display:block;
-        width:80vw;
+        display: block;
+        width: 80vw;
     }
-    #Menu{
-        margin-top:80px;
+
+    #Menu {
+        margin-top: 80px;
     }
-    #lbmode{
-        margin-left:10vw;
-        margin-top:150px;
+
+    #lbmode {
+        margin-left: 10vw;
+        margin-top: 150px;
     }
-    #infobulle{
-        left:10%;
-        
+
+    #infobulle {
+        left: 10%;
     }
 }

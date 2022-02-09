@@ -12,7 +12,7 @@
 </head>
 
 <body>
-   <input type="checkbox" id="mode" name="mode"><label id='lbmode' for='mode'>
+    <input type="checkbox" id="mode" name="mode"><label id='lbmode' for='mode'>
         <span id='toggle'>
             <span id=circle2></span>
             <span id=circle>
@@ -33,8 +33,8 @@
             <ul id="Menu" style="list-style-type: none">
                 <li class="grosmenu" id="histoire"><a href="./histoire.html">Histoire du Bitcoin</a>
                     <ul class="sousmenu">
-                        <li class="petitmenu"><a href="./histoire.html">Son mode de Création</a></li>
-                        <li class="petitmenu"><a href="./histoire.html">La circulation du bitcoin</a></li>
+                        <li class="petitmenu"><a href="./histoire.html#modeCrea">Son mode de Création</a></li>
+                        <li class="petitmenu"><a href="./histoire.html#circulation">La circulation du bitcoin</a></li>
                     </ul>
                 </li>
                 <li class="grosmenu"><a href="./raisonsucces.html">Raisons de son succès</a>
@@ -46,46 +46,88 @@
                 <li class="grosmenu"><a href="#">Inconvénients</a>
                     <ul class="sousmenu">
                         <li class="petitmenu"><a href="#">Conséquences écologiques</a></li>
-                        <li class="petitmenu"><a href="#">Moyens de le contrôler</a></li>
+                        <li class="petitmenu"><a href="#">Le Bitcoin et la cybercriminalité</a></li>
                     </ul>
                 </li>
             </ul>
         </nav>
     </header>
-    <div id = "color"></div>
+    <div id="color"></div>
     <main>
 
-        <h1>Les inconvenients de Bitcoin</h1>
+        <h1>Les inconvénients de Bitcoin</h1>
         <div class="container1">
             <h2>Conséquences écologiques</h2>
-            <p>Le Bitcoin serait-il une usina à gaz carbonique? En 2019, des chercheurs estimaient que l'empreinte carbone du réseau Bitcoin était équivalente à celle d'un petit pays.
-                Néanmois, éstimer l'impact écologique du Bitcoin n'est pas chose aisé. Plus le nombres de transactions effectués est grand, plus le réseau consomme d'énergie.
+            <p>Le Bitcoin serait-il une usine à gaz carbonique? En 2019, des chercheurs estimaient que l'empreinte
+                carbone du réseau Bitcoin était équivalente à celle d'un petit pays.
+                Néanmoins, estimer l'impact écologique du Bitcoin n'est pas chose aisé. Plus le nombres de transactions
+                effectués est grand, plus le réseau consomme d'énergie.
                 Ainsi, le problème apparait lorsque celle-ci est produite à partir de combustibles fossiles.
             </p>
             <p>
-                Pour autant, il y a grand débat autour des chiffres, les études divergent au gré des hypothèses retenues.
+                Pour autant, il y a grand débat autour des chiffres, les études divergent au gré des hypothèses
+                retenues.<br><br>
+                Quelques exemples pour 2018:</p>
                 <ul>
-                    Quelques exemples pour 2018:
-                    <li><p>Pour Digiconomist, site web tenu par Alex de Vries, data scientist au sein de la Banque des Pays-Bas, c’est environ environ 71 Twh/an. C’est l’estimation la plus alarmiste.</p></li>
-                    <li><p>Pour Marc Bevand, ancien spécialiste de la sécurité informatique chez Google, ce chiffre est surestimé au moins d’un facteur deux.</p></li>
-                    <li><p>Selon une étude publiée dans la revue Joule par des chercheurs de l’Université Technique de Munich, ce serait plutôt 45 TWh, soit la consommation électrique d’un pays comme la Jordanie ou le Sri Lanka.</p></li>
-                    <li><p>Enfin, pour des chercheurs de l’Université d’Aalborg au Danemark, la consommation d’énergie s’éleverait à 31 TWh, pour une empreinte carbone de 17 Mt eq CO2 en 2018.</p></li>
+                    <li>
+                        <p>Pour Digiconomist, site web tenu par Alex de Vries, data scientist au sein de la Banque des
+                            Pays-Bas, c’est environ environ 71 Twh/an. C’est l’estimation la plus alarmiste.</p>
+                    </li>
+                    <li>
+                        <p>Pour Marc Bevand, ancien spécialiste de la sécurité informatique chez Google, ce chiffre est
+                            surestimé au moins d’un facteur deux.</p>
+                    </li>
+                    <li>
+                        <p>Selon une étude publiée dans la revue Joule par des chercheurs de l’Université Technique de
+                            Munich, ce serait plutôt 45 TWh, soit la consommation électrique d’un pays comme la Jordanie
+                            ou le Sri Lanka.</p>
+                    </li>
+                    <li>
+                        <p>Enfin, pour des chercheurs de l’Université d’Aalborg au Danemark, la consommation d’énergie
+                            s’élèverait à 31 TWh, pour une empreinte carbone de 17 Mt eq CO2 en 2018.</p>
+                    </li>
                 </ul>
-            </p>
-            <p> Une estimation de cette consommation d'énergie est mise à jour régulièrement par l'Université de Cambridge <a href ="https://ccaf.io/cbeci/index">,Le Bitcoin Electricity Consumption Index,</a>
-                Par exemple, la consommation annuelle pour 2022 est estimer à 128.71 TWh, ce qui équivaut à environ 0,57% de la consommation mondiale d'éléctricité si l'on prend comment référencielle
+            
+            <p> Une estimation de cette consommation d'énergie est mise à jour régulièrement par l'Université de
+                Cambridge <a href="https://ccaf.io/cbeci/index">,Le Bitcoin Electricity Consumption Index,</a>
+                Par exemple, la consommation annuelle pour 2022 est estimer à 128.71 TWh, ce qui équivaut à environ
+                0,57% de la consommation mondiale d'électricité si l'on prend comment référentielle
                 le chiffre de 22 315 Twh pour l'année 2018.
-                Ce chiffre peut alors paraître négligeable, néanmois, cela dépend de l'échelle. Cela suffiraient à faire fonctionner le chauffage de tout les français pendant plus de 17 ans.
+                Ce chiffre peut alors paraître négligeable, néanmoins, cela dépend de l'échelle. Cela suffiraient à faire
+                fonctionner le chauffage de tout les français pendant plus de 17 ans.
                 (800Kwh par ménages par an, 9,3 millions de ménages)
                 (7,44 Twh pour tout les ménages par an)
-                (128,71 TWh/an /7,44TWh  = 17,3 années)
+                (128,71 TWh/an /7,44TWh = 17,3 années)
             </p>
         </div>
-        <img class = "svg" id = "svg3" src = "./img/bitcoin-img.svg" alt = "bitcoinsvg"></img>
-        <div class="container1">
-            <h2>Moyens de le contrôler</h2>
-            <p> a</p>
+        <img class="svg" id="svg3" src="./img/bitcoin-img.svg" alt="bitcoinsvg">
+        <div class="container1" >
+            <h2>Le Bitcoin et la cybercriminalité.</h2>
+            <p>Cette cryptomonnaie, comme toutes les autres est autant une innovation technologique qu'un canal
+                supplémentaire pour les criminels dans la réalisation de certaines opérations.
+                Il est difficile aujourd'hui d'estimer l'ampleur réelle des transactions frauduleuses dû aux
+                cryptomonnaies. De même pour la part de consommation d'énergie les
+                résultats varient drastiquement selon les sources (entre 0.34% et 23%).
+            </p>
+            <p>
+                Depuis l'apparition du Bitcoin en 2009, les crypto-monnaies sont devenus un moyen de faire des
+                transactions adopté aux quatre coins du monde. Le
+                Il est donc tout à fait naturel que les cyber-criminels en profitent pour faire du business sur le
+                darkweb et mener des opérations de fraude et d'extorsion.
+            </p>
+            <p>
+                Le marché étant dominé par le bitcoin, celui-ci possède donc une réelle importance. les cyber-criminels
+                profitent du système pour ajouter de plus en plus d'étapes
+                au processus de blanchiment afin de masquer leurs traces.
+            </p>
+            <p>
+                D'autres dérives de ce commerce permettent à des individus de frauder, de faire du trafic de drogue
+                voire même de vendre de la pédopornographie
+                tout en restant intraçable.
+            </p>
         </div>
-
+        <span id="copyright">@Copyright Fabron Trading
+            Clément LEFEVRE
+            Théo GUENEZAN</span>
     </main>
 </body>
