@@ -303,11 +303,11 @@ a:visited {
 
 #lbmode {
     position: absolute;
-    margin-left: 90vw;
-    margin-top: 90px;
+    margin-left: 70vw;
+    margin-top: 100px;
     cursor: pointer;
     transition: transform 0.5s ease-in-out;
-    z-index: 100;
+    z-index: 9999;
 }
 
 #toogle {
