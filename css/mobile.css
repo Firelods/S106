@@ -29,4 +29,27 @@
     #infobulle {
         left: 10%;
     }
+    main{
+        margin:0;
+    }
+    nav{
+        margin:0;
+        width:100vw;
+    }
+    .container,
+    .container1{
+        transition:none;
+        margin:0;
+        width:90vw;
+    }
+    .container:hover,
+.container1:hover {
+    transform: scale(1);
+    opacity:1;
+}
+#iframebtc{
+    width:100vw;
+    margin:0;
+}
+    
 }
